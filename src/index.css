@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --orange120: #E87928;
+  --orange100: #FF8B37;
+  --orange80: #FFAC70;
+  --orange5: #FFF3EB;
+  --green100: #47D867;
+  --green5: #E6FAEA;
+  --red100: #EC6259;
+  --red5: #FDEEED;
+  --black100: #1C1C21;
+  --black40: #D0D0D8;
+  --black5: #F5F5F7;
+  --white5: #FFFFFF;
+  --main-background: #E5E5E5;
+}
+
 html,
 body,
 #root {
