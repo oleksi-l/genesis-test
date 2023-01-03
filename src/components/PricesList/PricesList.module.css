@@ -1,0 +1,30 @@
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: scroll;
+  padding: 18.44% 0;
+}
+
+@media (orientation: portrait), (orientation: landscape) and (max-width: 960px) {
+  .list-wrapper {
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    min-height: 50%;
+    padding: 0;
+    background-color: var(--main-background);
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-wrapper {
+    padding: 0;
+    gap: 0;
+    min-height: initial;
+  }
+
+  .list-item {
+    margin-bottom: 8px;
+  }
+}

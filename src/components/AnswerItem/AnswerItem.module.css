@@ -1,0 +1,98 @@
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.button-container {
+  border-top: 1px solid var(--black40);
+  border-bottom: 1px solid var(--black40);
+  padding: 24.5px 0;
+  display: flex;
+  width: calc(100% - 100px);
+  background-color: var(--white5);
+  height: 72px;
+}
+
+.button-accent-text {
+  color: var(--orange100);
+  text-transform: uppercase;
+  margin: 0 8px 0 3px;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 600;
+}
+
+.button-text {
+  margin: 0 19px 0 0;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  color: var(--black100);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  width: calc(100% - 53px);
+}
+
+.button-shape {
+  width: 50px;
+  height: 72px;
+}
+
+.button:hover .button-shape path {
+  stroke: var(--orange100);
+  fill: var(--white5);
+  transition: stroke fill 0.5s;
+}
+
+.button:hover .button-container {
+  border-color: var(--orange100);
+  background-color: var(--white5);
+  transition: stroke fill 0.5s;
+}
+
+.button-selected {
+  border-color: var(--orange100);
+  background-color: var(--orange5);
+}
+
+.button-correct {
+  border-color: var(--green100);
+  background-color: var(--green5);
+}
+
+.button-error {
+  border-color: var(--red100);
+  background-color: var(--red5);
+}
+
+.button-arrow-right {
+  transform: rotate(-180deg);
+}
+
+@media (orientation: portrait) {
+  .button-container,
+  .button-shape {
+    height: 56px;
+  }
+
+  .button-container {
+    padding: 20px 0;
+  }
+
+  .button-text,
+  .button-accent-text {
+    font-size: 14px;
+    line-height: 16.24px;
+  }
+
+  .button-accent-text {
+    margin-left: -5px;
+  }
+}

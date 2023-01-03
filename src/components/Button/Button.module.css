@@ -1,0 +1,36 @@
+.button {
+  background-color: var(--orange100);
+  border-radius: 12px;
+  padding: 21px 24px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23.2px;
+  color: var(--white5);
+  border: none;
+  width: 296px;
+  transition: background-color 0.5s;
+}
+
+.button:hover {
+  background-color: var(--orange80);
+  transition: background-color 0.5s;
+}
+
+.button:focus {
+  background-color: var(--orange120);
+  transition: background-color 0.5s;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 16px 24px;
+    font-size: 14px;
+    line-height: 16.24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
+}

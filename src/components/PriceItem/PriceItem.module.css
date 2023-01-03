@@ -1,0 +1,105 @@
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+}
+
+.button-container {
+  padding: 7px 24px;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 176px);
+  background-color: var(--white5);
+  height: 40px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.button-text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  color: var(--black100);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.button-text-passed {
+  color: var(--black40);
+}
+
+.button:hover svg path {
+  stroke: var(--orange100);
+  fill: var(--white5);
+  transition: stroke fill 0.5s;
+}
+
+.button:hover .button-text {
+  color: var(--orange100);
+  transition: color 0.5s;
+}
+
+.button-container-inactive,
+.button-container-passed {
+  border-top: 1px solid var(--black40);
+  border-bottom: 1px solid var(--black40);
+}
+
+.button-shape-inactive path,
+.button-shape-passed path {
+  stroke: var(--black40);
+  fill: var(--white5);
+  transition: all 0.5s;
+}
+
+.button:hover .button-container,
+.button-container-selected {
+  border-color: var(--orange100);
+  background-color: var(--white5);
+  transition: all 0.5s;
+}
+
+.button-shape-selected path {
+  stroke: var(--orange100);
+  fill: var(--white5);
+  transition: all 0.5s;
+}
+
+.button-shape-right {
+  transform: rotate(-180deg);
+}
+
+.button-shape {
+  height: 40px;
+  width: 88px;
+}
+
+@media (orientation: portrait) {
+  .button {
+    height: 32px;
+    align-items: flex-start;
+  }
+
+  .button-container {
+    height: 32px;
+    padding: 8px 24px;
+  }
+
+  .button-text {
+    font-size: 14px;
+    line-height: 16.24px;
+  }
+
+  .button-shape {
+    height: 35px;
+  }
+
+  .button-shape-right {
+    align-self: flex-end;
+  }
+}
