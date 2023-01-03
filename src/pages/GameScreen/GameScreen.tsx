@@ -1,7 +1,7 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './GameScreen.module.css';
-import QuestionItem from '../QuestionItem/QuestionItem';
-import PricesList from '../PricesList/PricesList';
+import QuestionItem from '../../components/QuestionItem/QuestionItem';
+import PricesList from '../../components/PricesList/PricesList';
 import prices from '../../constants/prices';
 import HamburgerIcon from '../../assets/images/hamburger-button.svg';
 import CloseButton from '../../assets/images/close-button.svg';

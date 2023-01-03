@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FinalScreen.module.css';
 import Hand from '../../assets/images/hand.png';
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 
 const FinalScreen = () => (
   <div className={styles.wrapper}>

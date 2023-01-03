@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './InitialScreen.module.css';
 import Hand from '../../assets/images/hand.png';
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 
 const InitialScreen = () => (
   <div className={styles.wrapper}>

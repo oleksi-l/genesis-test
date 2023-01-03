@@ -37,7 +37,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: left;
-  width: calc(200% - 53px);
+  width: calc(100% - 53px);
 }
 
 .button-shape {

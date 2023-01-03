@@ -1,14 +1,13 @@
 import React from 'react';
-import Button from './components/Button/Button';
-import FinalScreen from './components/FinalScreen/FinalScreen';
-import GameScreen from './components/GameScreen/GameScreen';
-import InitialScreen from './components/InitialScreen/InitialScreen';
+import FinalScreen from './pages/FinalScreen/FinalScreen';
+import GameScreen from './pages/GameScreen/GameScreen';
+import InitialScreen from './pages/InitialScreen/InitialScreen';
 
 function App() {
   return (
-    <InitialScreen />
+    // <InitialScreen />
     // <FinalScreen />
-    // <GameScreen />
+    <GameScreen />
   );
 }
 
