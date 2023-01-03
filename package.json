@@ -21,8 +21,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
   },
   "browserslist": {
     "production": [
@@ -42,6 +45,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "husky": "^8.0.3",
-    "jest-watch-typeahead": "^0.6.5"
+    "jest-watch-typeahead": "^0.6.5",
+    "lint-staged": "^13.1.0"
   }
 }
