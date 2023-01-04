@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/genesis-test/static/css/main.fa6836b7.css",
+    "main.css": "/genesis-test/static/css/main.ef2e46fd.css",
     "main.js": "/genesis-test/static/js/main.f43c33c0.js",
     "static/media/hand.png": "/genesis-test/static/media/hand.7e02f3f6f67ad443ebb5.png",
     "index.html": "/genesis-test/index.html",
-    "main.fa6836b7.css.map": "/genesis-test/static/css/main.fa6836b7.css.map",
+    "main.ef2e46fd.css.map": "/genesis-test/static/css/main.ef2e46fd.css.map",
     "main.f43c33c0.js.map": "/genesis-test/static/js/main.f43c33c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa6836b7.css",
+    "static/css/main.ef2e46fd.css",
     "static/js/main.f43c33c0.js"
   ]
 }
