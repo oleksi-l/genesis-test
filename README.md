@@ -1,5 +1,5 @@
 To be able run it locally please:
-1. Run on terminal `git clone https://github.com/oleksi-l/genesis-test.git`
+1. Run on terminal `git clone https://github.com/oleksi-l/genesis-test.git`, please clone `main` branch
 2. Run on terminal `cd genesis-test`
 3. Run on terminal `npm i`
 4. Run on terminal `npm start`
