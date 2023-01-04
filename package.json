@@ -2,6 +2,7 @@
   "name": "genesis-test-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oleksi-l.github.io/genesis-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -19,9 +20,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test a",
     "eject": "react-scripts eject",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
   },
   "browserslist": {
     "production": [
@@ -39,6 +46,10 @@
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0"
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "gh-pages": "^4.0.0",
+    "husky": "^8.0.3",
+    "jest-watch-typeahead": "^0.6.5",
+    "lint-staged": "^13.1.0"
   }
 }
