@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import styles from './AnswerItem.module.css';
 import { ReactComponent as ButtonShape } from '../../assets/images/question-item-shape.svg';
 
@@ -20,18 +21,27 @@ const AnswerItem = (props: AnswerButtonProps) => {
   const {
     type, letter, text, className,
   } = props;
+  const btnCls = classNames({
+    [styles.button]: true,
+    [className ?? '']: className?.length,
+  });
+  const btnContainerCls = classNames({
+    [styles['button-container']]: true,
+    [styles[`button-${type}`]]: type,
+  });
+  const btnShapeCls = classNames({
+    [styles['button-arrow-right']]: true,
+    [styles['button-shape']]: true,
+  });
+
   return (
-    <button type="button" className={`${styles.button} ${className ?? ''}`}>
+    <button type="button" className={btnCls}>
       <ButtonShape className={styles['button-shape']} />
-      <div
-        className={`${styles['button-container']} ${styles[`button-${type}`]}`}
-      >
+      <div className={btnContainerCls}>
         <strong className={styles['button-accent-text']}>{letter}</strong>
         <p className={styles['button-text']}>{text}</p>
       </div>
-      <ButtonShape
-        className={`${styles['button-arrow-right']} ${styles['button-shape']}`}
-      />
+      <ButtonShape className={btnShapeCls} />
     </button>
   );
 };

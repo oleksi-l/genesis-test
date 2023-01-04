@@ -72,6 +72,10 @@
     padding: 0;
   }
 
+  .card-image {
+    max-width: 90%;
+  }
+
   .card-title {
     font-size: 18px;
     line-height: 20.88px;
