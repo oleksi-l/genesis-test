@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 import styles from './GameScreen.module.css';
 import QuestionItem from '../../components/QuestionItem/QuestionItem';
 import PricesList from '../../components/PricesList/PricesList';
@@ -12,16 +13,26 @@ const GameScreen = () => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
   };
+  const priceListWrapperCls = classNames({
+    [styles['price-list-hidden']]: !isMenuOpen,
+    [styles['price-list-wrapper']]: true,
+  });
 
   return (
-    <div className={`${styles.wrapper} ${isMenuOpen ? styles.locked : ''}`}>
+    <div className={styles.wrapper}>
       <div className={styles['question-item-wrapper']}>
         <QuestionItem />
       </div>
-      <div className={`${styles['price-list-wrapper']} ${!isMenuOpen ? styles['price-list-hidden'] : ''}`}>
+      <div
+        className={priceListWrapperCls}
+      >
         <PricesList className={styles['price-list']} options={prices} />
       </div>
-      <button type="button" className={styles['mobile-menu-button']} onClick={toggleMenuOpen}>
+      <button
+        type="button"
+        className={styles['mobile-menu-button']}
+        onClick={toggleMenuOpen}
+      >
         {!isMenuOpen ? (
           <img
             src={HamburgerIcon}
