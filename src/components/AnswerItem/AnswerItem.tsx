@@ -46,7 +46,7 @@ const AnswerItem = (props: AnswerButtonProps) => {
   });
 
   return (
-    <button type="button" className={btnCls} onClick={onChooseAnswerItem}>
+    <button type="button" className={btnCls} onClick={onChooseAnswerItem} title={text}>
       <ButtonShape className={btnShapeCls} />
       <div className={btnContainerCls}>
         <strong className={styles['button-accent-text']}>{letter}</strong>
