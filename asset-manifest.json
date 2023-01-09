@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/genesis-test/static/css/main.7b3c2e5e.css",
-    "main.js": "/genesis-test/static/js/main.8d6e12c9.js",
+    "main.css": "/genesis-test/static/css/main.0693a664.css",
+    "main.js": "/genesis-test/static/js/main.6aceb5c6.js",
     "static/media/hand.png": "/genesis-test/static/media/hand.7e02f3f6f67ad443ebb5.png",
     "static/media/price-shape.svg": "/genesis-test/static/media/price-shape.b761b5fb8f450a5ff33e62d94bc3ff64.svg",
     "static/media/question-item-shape.svg": "/genesis-test/static/media/question-item-shape.d2beeca11731dad66d72818a368fc843.svg",
     "index.html": "/genesis-test/index.html",
     "static/media/close-button.svg": "/genesis-test/static/media/close-button.67d0a39e8f2afba171e53b6f3531670b.svg",
     "static/media/hamburger-button.svg": "/genesis-test/static/media/hamburger-button.2e4db3a986ee50d80ed0a331fba7eda5.svg",
-    "main.7b3c2e5e.css.map": "/genesis-test/static/css/main.7b3c2e5e.css.map",
-    "main.8d6e12c9.js.map": "/genesis-test/static/js/main.8d6e12c9.js.map"
+    "main.0693a664.css.map": "/genesis-test/static/css/main.0693a664.css.map",
+    "main.6aceb5c6.js.map": "/genesis-test/static/js/main.6aceb5c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b3c2e5e.css",
-    "static/js/main.8d6e12c9.js"
+    "static/css/main.0693a664.css",
+    "static/js/main.6aceb5c6.js"
   ]
 }
