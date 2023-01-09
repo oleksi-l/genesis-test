@@ -6,12 +6,12 @@
 
 .list-item {
   margin-bottom: 20px;
-  flex-basis: 50%;
+  width: 50%;
 }
 
 @media (orientation: portrait), (orientation: landscape) and (max-width: 960px) {
   .list-item {
-    flex-basis: 100%;
+    width: 100%;
     margin-bottom: 8px;
   }
 

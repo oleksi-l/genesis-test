@@ -2,11 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './PricesList.module.css';
 import PriceItem from '../PriceItem/PriceItem';
-
-export type PriceItemProps = {
-  id: number;
-  value: string;
-};
+import { PriceItemType, PriceItem as PriceItemProps } from '../../types/game';
 
 type PricesListProps = {
   options: PriceItemProps[];
@@ -24,7 +20,7 @@ const PricesList = ({ options, className }: PricesListProps) => {
       {options.map((item) => (
         <PriceItem
           key={item.id}
-          status="passed"
+          status={item.status ?? PriceItemType.INACTIVE}
           text={item.value}
           className={styles['list-item']}
         />

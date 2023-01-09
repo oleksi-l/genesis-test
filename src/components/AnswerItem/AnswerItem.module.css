@@ -6,6 +6,7 @@
   border: none;
   padding: 0;
   position: relative;
+  transition: all 2s;
 }
 
 .button-container {
@@ -31,6 +32,7 @@
   margin: 0 19px 0 0;
   font-size: 20px;
   line-height: 23px;
+  height: 24px;
   font-weight: 400;
   color: var(--black100);
   overflow: hidden;
@@ -48,28 +50,48 @@
 .button:hover .button-shape path {
   stroke: var(--orange100);
   fill: var(--white5);
-  transition: stroke fill 0.5s;
 }
 
 .button:hover .button-container {
   border-color: var(--orange100);
   background-color: var(--white5);
-  transition: stroke fill 0.5s;
 }
 
-.button-selected {
+.button-selected,
+.button:focus .button-selected {
   border-color: var(--orange100);
   background-color: var(--orange5);
 }
 
-.button-correct {
+.button-shape-selected path,
+.button:focus .button-shape-selected path {
+  stroke: var(--orange100);
+  fill: var(--orange5);
+}
+
+.button-correct,
+.button:focus .button-correct 
+{
   border-color: var(--green100);
   background-color: var(--green5);
 }
 
-.button-error {
+.button-shape-correct path,
+.button:focus .button-shape-correct path {
+  stroke: var(--green100);
+  fill: var(--green5);
+}
+
+.button-error,
+.button:focus .button-error {
   border-color: var(--red100);
   background-color: var(--red5);
+}
+
+.button-shape-error path,
+.button:focus .button-shape-error path {
+  stroke: var(--red100);
+  fill: var(--red5);
 }
 
 .button-arrow-right {
@@ -84,15 +106,23 @@
 
   .button-container {
     padding: 20px 0;
+    width: calc(100% - 100px);
   }
 
   .button-text,
   .button-accent-text {
     font-size: 14px;
     line-height: 16.24px;
+    height: 17px;
   }
 
   .button-accent-text {
     margin-left: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-text {
+    max-width: 180px;
   }
 }
