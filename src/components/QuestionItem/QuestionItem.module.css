@@ -62,9 +62,8 @@
 
   .question-title-wrapper {
     padding: 136px 16px 0;
-    width: calc(100% - 32px);
+    width: 100%;
     display: flex;
-    /* padding-top: 136px; */
   }
 
   .items-wrapper {

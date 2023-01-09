@@ -94,6 +94,18 @@
   fill: var(--red5);
 }
 
+.button-inactive,
+.button:focus .button-inactive {
+  border-top: 1px solid var(--black40);
+  border-bottom: 1px solid var(--black40);
+}
+
+.button-shape-inactive path,
+.button:focus .button-shape-inactive path {
+  stroke: var(--black40);
+  fill: var(--white5);
+}
+
 .button-arrow-right {
   transform: rotate(-180deg);
 }
