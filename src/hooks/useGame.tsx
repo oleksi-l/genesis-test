@@ -18,9 +18,9 @@ const checkIsAnswerValid = (
 
 const useGame = (gameConfig: GameConfig) => {
   const [page, setPage] = useState(0);
-
   const [questions, setQuestions] = useState<Map<number, QuestionItem> | null>(null);
   const [prices, setPrices] = useState<PriceItem[] | null>(null);
+  const [error, setError] = useState<null | string>(null);
 
   useEffect(() => {
     if (gameConfig) {
@@ -85,15 +85,20 @@ const useGame = (gameConfig: GameConfig) => {
   const updatePrice = (item: Record<string, UpdatePriceItem>) => {
     if (!prices?.length) return;
 
-    const updatedPrices = prices.map((price) => {
-      if (price.value === item?.[price.value]?.value) {
-        return { ...price, status: item?.[price.value].status };
-      }
+    try {
+      const updatedPrices = prices.map((price) => {
+        if (price.value === item?.[price.value]?.value) {
+          return { ...price, status: item?.[price.value].status };
+        }
 
-      return price;
-    });
+        return price;
+      });
 
-    setPrices(updatedPrices);
+      setPrices(updatedPrices);
+    } catch (err) {
+      setError('Unable to update prices list, please be sure that you have correct data');
+      setPrices(gameConfig.prices.sort((a, b) => Number(a.id < b.id)));
+    }
   };
 
   const handleUpdatePrice = (currentPrice: string, nextPrice: string) => {
@@ -160,18 +165,22 @@ const useGame = (gameConfig: GameConfig) => {
   const chooseAnswer = (answer: string) => {
     let updateTimeout: string | number | NodeJS.Timeout | undefined;
 
-    // prevent other click if option had be chosen
-    if (!currentOption && currentQuestion) {
-      updateCurrentQuestionAnswers(AnswerStateType.SELECTED, answer);
-      setCurrentOption(answer);
+    try {
+      // prevent other click if option had be chosen
+      if (!currentOption && currentQuestion) {
+        updateCurrentQuestionAnswers(AnswerStateType.SELECTED, answer);
+        setCurrentOption(answer);
 
-      // all changes too fast added timeout to delay
-      updateTimeout = setTimeout(() => {
-        handleUserChoice(answer, currentQuestion);
-      }, 700);
+        // all changes too fast added timeout to delay
+        updateTimeout = setTimeout(() => {
+          handleUserChoice(answer, currentQuestion);
+        }, 700);
+      }
+
+      return () => clearTimeout(updateTimeout);
+    } catch (err) {
+      return setError('Something went wrong, please check be sure that you logic hasnt any mistakes');
     }
-
-    return () => clearTimeout(updateTimeout);
   };
 
   return {
@@ -183,6 +192,8 @@ const useGame = (gameConfig: GameConfig) => {
     currentOption,
     retry,
     totalAmount,
+    error,
+    setError,
   };
 };
 

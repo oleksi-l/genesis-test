@@ -4,6 +4,7 @@ import GameScreen from './pages/GameScreen/GameScreen';
 import InitialScreen from './pages/InitialScreen/InitialScreen';
 import config from './constants/config.json';
 import useGame from './hooks/useGame';
+import FallbackComponent from './components/FallbackComponent/FallbackComponent';
 
 const App = () => {
   const {
@@ -14,6 +15,7 @@ const App = () => {
     prices,
     currentQuestion,
     totalAmount,
+    error,
   } = useGame(config);
 
   const renderPage = (pageId: number) => {
@@ -30,17 +32,14 @@ const App = () => {
         );
       case 2:
         return !currentQuestion ? null : (
-          <FinalScreen
-            retry={retry}
-            amount={totalAmount}
-          />
+          <FinalScreen retry={retry} amount={totalAmount} />
         );
       default:
         return null;
     }
   };
 
-  return renderPage(page);
+  return !error ? renderPage(page) : <FallbackComponent error={error} />;
 };
 
 export default App;
