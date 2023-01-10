@@ -21,6 +21,7 @@ const useGame = (gameConfig: GameConfig) => {
   const [questions, setQuestions] = useState<Map<number, QuestionItem> | null>(null);
   const [prices, setPrices] = useState<PriceItem[] | null>(null);
   const [error, setError] = useState<null | string>(null);
+  const [currentQuestionId, setCurrentQuestionId] = useState(gameConfig.questions[0].id);
 
   useEffect(() => {
     if (gameConfig) {
@@ -34,9 +35,11 @@ const useGame = (gameConfig: GameConfig) => {
     if (page === 2) {
       setQuestions(createIndexedMap(gameConfig.questions));
       setPrices(gameConfig.prices.sort((a, b) => Number(a.id < b.id)));
-      setCurrentQuestionId(1);
+      setCurrentQuestionId(gameConfig.questions[0].id);
     }
   }, [page, gameConfig]);
+
+  // console.log('questions', questions);
 
   const startGame = () => {
     setPage((prevPageId) => prevPageId + 1);
@@ -51,7 +54,6 @@ const useGame = (gameConfig: GameConfig) => {
 
   const retry = () => setPage(0);
 
-  const [currentQuestionId, setCurrentQuestionId] = useState(1);
   const [currentOption, setCurrentOption] = useState<string | null>(null);
 
   const currentQuestion = useMemo(() => {
@@ -61,6 +63,8 @@ const useGame = (gameConfig: GameConfig) => {
 
     return config.questions[0];
   }, [questions, currentQuestionId]);
+
+  // console.log('current', currentQuestion, 'id', currentQuestionId);
 
   const updateCurrentQuestionAnswers = async (
     type: `${AnswerStateType}`,
