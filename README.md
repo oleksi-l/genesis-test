@@ -15,3 +15,6 @@ Run on terminal `npm run deploy`
 
 # Enviroment requirements
 You need to have at least Node.js v16.0.0, otherwise you will have warnings on terminal.
+
+# You can also play by link 
+https://oleksi-l.github.io/genesis-test
