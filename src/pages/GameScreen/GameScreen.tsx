@@ -3,16 +3,30 @@ import classNames from 'classnames';
 import styles from './GameScreen.module.css';
 import QuestionItem from '../../components/QuestionItem/QuestionItem';
 import PricesList from '../../components/PricesList/PricesList';
-import prices from '../../constants/prices';
 import HamburgerIcon from '../../assets/images/hamburger-button.svg';
 import CloseButton from '../../assets/images/close-button.svg';
+import {
+  PriceItem,
+  QuestionItem as QuestionItemType,
+} from '../../types/game';
 
-const GameScreen = () => {
+interface GameScreenProps {
+  prices: PriceItem[];
+  question: QuestionItemType;
+  chooseAnswer: (answer: string) => void;
+}
+
+const GameScreen = (props: GameScreenProps) => {
+  const {
+    prices, question, chooseAnswer,
+  } = props;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenuOpen = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
   };
+
   const priceListWrapperCls = classNames({
     [styles['price-list-hidden']]: !isMenuOpen,
     [styles['price-list-wrapper']]: true,
@@ -20,12 +34,15 @@ const GameScreen = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles['question-item-wrapper']}>
-        <QuestionItem />
-      </div>
-      <div
-        className={priceListWrapperCls}
-      >
+      {question ? (
+        <div className={styles['question-item-wrapper']}>
+          <QuestionItem
+            question={question}
+            chooseAnswer={chooseAnswer}
+          />
+        </div>
+      ) : null}
+      <div className={priceListWrapperCls}>
         <PricesList className={styles['price-list']} options={prices} />
       </div>
       <button

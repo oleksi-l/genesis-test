@@ -1,43 +1,23 @@
 import React from 'react';
 import styles from './QuestionItem.module.css';
 import AnswersList from '../AnswersList/AnswersList';
+import { QuestionItem as QuestionItemType } from '../../types/game';
 
-const data = [
-  {
-    id: 1,
-    letter: 'A',
-    text: 'Plain text',
-    type: 'inactive',
-  },
-  {
-    id: 1,
-    letter: 'A',
-    text: 'Plain text',
-    type: 'inactive',
-  },
-  {
-    id: 1,
-    letter: 'A',
-    text: 'Plain text',
-    type: 'inactive',
-  },
-  {
-    id: 1,
-    letter: 'A',
-    text: 'Plain text',
-    type: 'inactive',
-  },
-];
+interface QuestionItemProps {
+  question: QuestionItemType;
+  chooseAnswer: (answer: string) => void;
+}
 
-const QuestionItem = () => (
+const QuestionItem = ({ question, chooseAnswer }: QuestionItemProps) => (
   <div className={styles['question-wrapper']}>
     <div className={styles['question-title-wrapper']}>
-      <h1 className={styles['question-title']}>
-        How old your elder brother was 10 years before you was born, mate?
-      </h1>
+      <h1 className={styles['question-title']}>{question.question}</h1>
     </div>
     <div className={styles['items-wrapper']}>
-      <AnswersList options={data} />
+      <AnswersList
+        options={question.answers ?? []}
+        chooseAnswer={chooseAnswer}
+      />
     </div>
   </div>
 );

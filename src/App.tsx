@@ -1,14 +1,7 @@
 import React from 'react';
-// import FinalScreen from './pages/FinalScreen/FinalScreen';
-// import GameScreen from './pages/GameScreen/GameScreen';
-import InitialScreen from './pages/InitialScreen/InitialScreen';
+import config from './constants/config.json';
+import AppContainer from './containers/AppContainer';
 
-function App() {
-  return (
-    <InitialScreen />
-    // <FinalScreen />
-    // <GameScreen />
-  );
-}
+const App = () => <AppContainer config={config} />;
 
 export default App;

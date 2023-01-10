@@ -1,0 +1,342 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "In 1768, Captain James Cook set out to explore which ocean?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Pacific Ocean"
+        },
+        {
+          "letter": "B",
+          "answer": "Atlantic Ocean"
+        },
+        {
+          "letter": "C",
+          "answer": "Indian Ocean"
+        },
+        {
+          "letter": "D",
+          "answer": "Arctic Ocean"
+        }
+      ],
+      "correctAnswer": ["A"],
+      "price": "$500"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following disorders is the fear of being alone?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Agoraphobia"
+        },
+        {
+          "letter": "B",
+          "answer": "Aerophobia"
+        },
+        {
+          "letter": "C",
+          "answer": "Acrophobia"
+        },
+        {
+          "letter": "D",
+          "answer": "Acrophobia"
+        }
+      ],
+      "correctAnswer": ["A"],
+      "price": "$1,000"
+    },
+    {
+      "id": 3,
+      "question": "What is the speed of sound?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "120 km/h"
+        },
+        {
+          "letter": "B",
+          "answer": "1,200 km/h"
+        },
+        {
+          "letter": "C",
+          "answer": "400 km/h"
+        },
+        {
+          "letter": "D",
+          "answer": "700 km/h"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$2,000"
+    },
+    {
+      "id": 4,
+      "question": "Which is the easiest way to tell the age of many trees?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "To measure the width of the tree"
+        },
+        {
+          "letter": "B",
+          "answer": "To count the rings on the trunk"
+        },
+        {
+          "letter": "C",
+          "answer": "To count the number of leaves"
+        },
+        {
+          "letter": "D",
+          "answer": "To measure the height of the tree"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$4,000"
+    },
+    {
+      "id": 5,
+      "question": "Which did Viking people use as money?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Rune stones"
+        },
+        {
+          "letter": "B",
+          "answer": "Jewellery"
+        },
+        {
+          "letter": "C",
+          "answer": "Seal skins"
+        },
+        {
+          "letter": "D",
+          "answer": "Wool"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$8,000"
+    },
+    {
+      "id": 6,
+      "question": "What was the first country to use tanks in combat during World War I?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "France"
+        },
+        {
+          "letter": "B",
+          "answer": "Japan"
+        },
+        {
+          "letter": "C",
+          "answer": "Britain"
+        },
+        {
+          "letter": "D",
+          "answer": "Germany"
+        }
+      ],
+      "correctAnswer": ["C"],
+      "price": "$16,000"
+    },
+    {
+      "id": 7,
+      "question": "Goulash is a type of beef soup in which country?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Hungary"
+        },
+        {
+          "letter": "B",
+          "answer": "Czech Republic"
+        },
+        {
+          "letter": "C",
+          "answer": "Slovakia"
+        },
+        {
+          "letter": "D",
+          "answer": "Ireland"
+        }
+      ],
+      "correctAnswer": ["A"],
+      "price": "$32,000"
+    },
+    {
+      "id": 8,
+      "question": "The phrase: ”I think, therefore I am” was coined by which philosopher?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Socrates"
+        },
+        {
+          "letter": "B",
+          "answer": "Plato"
+        },
+        {
+          "letter": "C",
+          "answer": "Aristotle"
+        },
+        {
+          "letter": "D",
+          "answer": "Descartes"
+        }
+      ],
+      "correctAnswer": ["D"],
+      "price": "$64,000"
+    },
+    {
+      "id": 9,
+      "question": "In the series “Game of Thrones”, Winterfell is the ancestral home of which family?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "The Lannisters"
+        },
+        {
+          "letter": "B",
+          "answer": "The Starks"
+        },
+        {
+          "letter": "C",
+          "answer": "The Tully’s"
+        },
+        {
+          "letter": "D",
+          "answer": "The Targaryens"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$125,000"
+    },
+    {
+      "id": 10,
+      "question": "What is the name of the first book of the Old Testament in the Bible?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Exodus"
+        },
+        {
+          "letter": "B",
+          "answer": "Genesis"
+        },
+        {
+          "letter": "C",
+          "answer": "Proverbs"
+        },
+        {
+          "letter": "D",
+          "answer": "Matthew"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$250,000"
+    },
+    {
+      "id": 11,
+      "question": "What is the rarest type of blood in the human body?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "AB negative"
+        },
+        {
+          "letter": "B",
+          "answer": "O positive"
+        },
+        {
+          "letter": "C",
+          "answer": "B negative"
+        },
+        {
+          "letter": "D",
+          "answer": "A positive"
+        }
+      ],
+      "correctAnswer": ["A"],
+      "price": "$500,000"
+    },
+    {
+      "id": 12,
+      "question": "Cu is the chemical symbol for which element?",
+      "answers": [
+        {
+          "letter": "A",
+          "answer": "Oxygen"
+        },
+        {
+          "letter": "B",
+          "answer": "Copper"
+        },
+        {
+          "letter": "C",
+          "answer": "Zinc"
+        },
+        {
+          "letter": "D",
+          "answer": "Helium"
+        }
+      ],
+      "correctAnswer": ["B"],
+      "price": "$1,000,000"
+    }
+  ],
+  "prices": [
+    {
+      "id": 1,
+      "value": "$500"
+    },
+    {
+      "id": 2,
+      "value": "$1,000"
+    },
+    {
+      "id": 3,
+      "value": "$2,000"
+    },
+    {
+      "id": 4,
+      "value": "$4,000"
+    },
+    {
+      "id": 5,
+      "value": "$8,000"
+    },
+    {
+      "id": 6,
+      "value": "$16,000"
+    },
+    {
+      "id": 7,
+      "value": "$32,000"
+    },
+    {
+      "id": 8,
+      "value": "$64,000"
+    },
+    {
+      "id": 9,
+      "value": "$125,000"
+    },
+    {
+      "id": 10,
+      "value": "$250,000"
+    },
+    {
+      "id": 11,
+      "value": "$500,000"
+    },
+    {
+      "id": 12,
+      "value": "$1,000,000"
+    }
+  ]
+}

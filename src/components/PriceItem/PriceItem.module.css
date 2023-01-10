@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.button-text-passed {
+.button-text-completed {
   color: var(--black40);
 }
 
@@ -39,19 +39,20 @@
   transition: stroke fill 0.5s;
 }
 
+.button-text-selected,
 .button:hover .button-text {
   color: var(--orange100);
   transition: color 0.5s;
 }
 
 .button-container-inactive,
-.button-container-passed {
+.button-container-completed {
   border-top: 1px solid var(--black40);
   border-bottom: 1px solid var(--black40);
 }
 
 .button-shape-inactive path,
-.button-shape-passed path {
+.button-shape-completed path {
   stroke: var(--black40);
   fill: var(--white5);
   transition: all 0.5s;
