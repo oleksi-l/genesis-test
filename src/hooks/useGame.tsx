@@ -39,8 +39,6 @@ const useGame = (gameConfig: GameConfig) => {
     }
   }, [page, gameConfig]);
 
-  // console.log('questions', questions);
-
   const startGame = () => {
     setPage((prevPageId) => prevPageId + 1);
 
@@ -63,8 +61,6 @@ const useGame = (gameConfig: GameConfig) => {
 
     return config.questions[0];
   }, [questions, currentQuestionId]);
-
-  // console.log('current', currentQuestion, 'id', currentQuestionId);
 
   const updateCurrentQuestionAnswers = async (
     type: `${AnswerStateType}`,

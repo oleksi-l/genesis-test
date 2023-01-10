@@ -8,7 +8,6 @@
 
 @media (orientation: portrait), (orientation: landscape) and (max-width: 960px) {
   .list-wrapper {
-    /* flex-direction: row; */
     flex-wrap: wrap;
     min-height: 50%;
     padding: 0;
