@@ -26,7 +26,7 @@ const useGame = (gameConfig: GameConfig) => {
   useEffect(() => {
     if (gameConfig) {
       setQuestions(createIndexedMap(gameConfig.questions));
-      setPrices(gameConfig.prices.sort((a, b) => Number(a.id < b.id)));
+      setPrices(gameConfig.prices.sort((a, b) => b.id - a.id));
     }
   }, [gameConfig]);
 
@@ -34,7 +34,7 @@ const useGame = (gameConfig: GameConfig) => {
   useEffect(() => {
     if (page === 2) {
       setQuestions(createIndexedMap(gameConfig.questions));
-      setPrices(gameConfig.prices.sort((a, b) => Number(a.id < b.id)));
+      setPrices(gameConfig.prices.sort((a, b) => b.id - a.id));
       setCurrentQuestionId(gameConfig.questions[0].id);
     }
   }, [page, gameConfig]);
