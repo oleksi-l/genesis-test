@@ -33,14 +33,7 @@
   color: var(--black40);
 }
 
-.button:hover svg path {
-  stroke: var(--orange100);
-  fill: var(--white5);
-  transition: stroke fill 0.5s;
-}
-
-.button-text-selected,
-.button:hover .button-text {
+.button-text-selected {
   color: var(--orange100);
   transition: color 0.5s;
 }
@@ -58,7 +51,6 @@
   transition: all 0.5s;
 }
 
-.button:hover .button-container,
 .button-container-selected {
   border-color: var(--orange100);
   background-color: var(--white5);
